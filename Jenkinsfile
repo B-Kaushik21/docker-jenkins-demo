@@ -6,11 +6,12 @@ pipeline {
     }
     stages{
         stage('checkout source code'){
-            steps{
-                echo 'pulling source code from github'
-                git branch: 'main', url: 'https://github.com/B-Kaushik21/docker-jenkins-demo.git'
-            }
-        }
+    steps{
+        echo 'pulling source code from github'
+        git branch: 'master', url: 'https://github.com/B-Kaushik21/docker-jenkins-demo.git'
+    }
+}
+
         stage('build docker image'){
             steps{
                 bat 'docker build -t $IMAGE_NAME:latest .'

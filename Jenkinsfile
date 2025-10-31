@@ -1,6 +1,6 @@
 pipeline {
     agent any 
-    enviroment {
+    environment {
         DOCKERHUB_CREDENTIALS = credentials('docker-hub-credentials')
         IMAGE_NAME = 'kaushik021/docker-jenkins-demo'
     }
